@@ -1,0 +1,62 @@
+global:
+  editing_mode: emacs             # default is: emacs
+  # pathext: [".bat", ".cmd"]  # for windows users
+  custom_commands:
+    # > ignore_of lib  =>  svn propedit svn:ignore lib
+    - pattern: \Aignore_of (.*)
+      rule: "{system} propedit svn:ignore {$1}"
+      for: svn, svk
+    # > ignore lib/*.o  =>  svn propset svn:ignore *.o lib
+    - pattern: \Aignore (.*)[\\/]([^\\/]+)
+      rule: "{system} propset svn:ignore {$2} {$1}"
+      for: svn, svk
+    - pattern: \Aci (.*) -m(.*)
+      rule: "{system} ci -m {$2} {$1}"
+      for: hg
+    - pattern: \Adi(.*)
+      rule: "{system} di{$1} | ~/.vim/diffcolor.rb | nkf --utf8"
+    - pattern: \Adil(.*)
+      rule: "{system} di{$1} | ~/.vim/diffcolor.rb | lv -c"
+    - pattern: \Adix(.*)
+      rule: "{system} di --cached {$1} | ~/.vim/diffcolor.rb | lv -c"
+      for: git
+    - pattern: \Amkb (.*)
+      rule: "{system} checkout -b {$1}"
+      for: git
+    - pattern: \Armb (.*)
+      rule: "{system} branch -d {$1}"
+      for: git
+    - pattern: \A(b|branch)( .*)?
+      rule: "{system} branch{$2}"
+      for: git
+    - pattern: \Aco ?
+      rule: "{system} checkout master"
+      for: git
+    - pattern: \Aco (.*)
+      rule: "{system} checkout {$1}"
+      for: git
+    - pattern: \Aglog\Z
+      rule: "{system} glog | head -n 30"
+      for: hg
+    - pattern: \Aglog\Z
+      rule: "{system} log --graph"
+      for: git
+    - pattern: \Aunstage(.*)\Z
+      rule: "{system} reset HEAD {$1}"
+      for: git
+    - pattern: \Arevert_file(.*)\Z
+      rule: "{system} checkout -- {$1}"
+      for: git
+
+# settings for each vcs
+system:
+  default:  # for all vcs
+    prompt: "> "
+  svn:
+    binpath: svn
+  svk:
+    #binpath: c:/prog/svk/bin/svk.bat    # path to svk
+    prompt: "svk > "                    # prompt
+    default_cmd: "status"               # used when you just type [Enter]
+  hg:
+    binpath: hg
