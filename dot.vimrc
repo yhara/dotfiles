@@ -154,4 +154,8 @@ autocmd TabEnter *
       \ | endif
       \ | execute 'cd' fnameescape(t:cwd)
 
+" git-vim
+let g:git_command_edit = 'rightbelow vnew'
+nnoremap <Leader>gc :<C-u>GitCommit -v<Enter>
+
 source ~/.vimrc.mine
