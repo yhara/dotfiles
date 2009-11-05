@@ -13,18 +13,30 @@ global:
     - pattern: \Aci (.*) -m(.*)
       rule: "{system} ci -m {$2} {$1}"
       for: hg
+    - pattern: \Aci(.*)
+      rule: "{system} ci -v {$1}"
+      for: git
+    - pattern: \Aciv
+      rule: "{system} ci -v"
+      for: git
+    - pattern: \Aciv?a
+      rule: "{system} ci -v -a"
+      for: git
     - pattern: \Adi(.*)
-      rule: "{system} di{$1} | ~/.vim/diffcolor.rb | nkf --utf8"
+      rule: "{system} di{$1} | diffcolor.rb | nkf --utf8"
     - pattern: \Adil(.*)
-      rule: "{system} di{$1} | ~/.vim/diffcolor.rb | lv -c"
+      rule: "{system} di{$1} | diffcolor.rb | lv -c"
     - pattern: \Adix(.*)
-      rule: "{system} di --cached {$1} | ~/.vim/diffcolor.rb | lv -c"
+      rule: "{system} di --cached {$1} | diffcolor.rb | lv -c"
       for: git
     - pattern: \Amkb (.*)
       rule: "{system} checkout -b {$1}"
       for: git
     - pattern: \Armb (.*)
       rule: "{system} branch -d {$1}"
+      for: git
+    - pattern: \Amerge! (.*)
+      rule: "{system} merge {$1} ; {system} branch -d {$1}"
       for: git
     - pattern: \A(b|branch)( .*)?
       rule: "{system} branch{$2}"
