@@ -126,6 +126,8 @@ cnoremap <expr> / getcmdtype() == '/' ? '\/' : '/'
 inoremap <ESC>  <ESC>:<C-u>w<Return>
 "autocmd InsertLeave * silent! write
 
+" q to close help : http://d.hatena.ne.jp/mickey24/20090429/1240992099
+autocmd FileType help nnoremap <buffer> q <C-w>c
 
 inoremap SLD (""<CR>)
 
@@ -157,5 +159,6 @@ autocmd TabEnter *
 " git-vim
 let g:git_command_edit = 'rightbelow vnew'
 nnoremap <Leader>gc :<C-u>GitCommit -v<Enter>
+autocmd FileType git-status,git-log nnoremap <buffer> q <C-w>c
 
 source ~/.vimrc.mine
