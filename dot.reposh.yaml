@@ -59,6 +59,15 @@ global:
     - pattern: \Arevert_file(.*)\Z
       rule: "{system} checkout -- {$1}"
       for: git
+    - pattern: \Aput\Z
+      rule: "{system} svn dcommit"
+      for: git
+    - pattern: \Aget\Z
+      rule: "{system} svn rebase"
+      for: git
+    - pattern: \Async\Z
+      rule: "{system} stash save ; {system} svn rebase ; {system} svn dcommit ; {system} stash pop"
+      for: git
 
 # settings for each vcs
 system:
