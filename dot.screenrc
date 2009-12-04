@@ -4,7 +4,7 @@ vbell off
 defscrollback 8192
 
 hardstatus on
-hardstatus alwayslastline "%H | %-w%{=b gw}%n %t%{-}%+w | %0` %u %= %m/%d %D %c"
+hardstatus alwayslastline "%H | %-w%{=b gw}%n %t%{-}%+w | %0` %u %= %m/%d %c"
 #hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
 sessionname norm
 
