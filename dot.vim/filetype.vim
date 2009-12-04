@@ -3,7 +3,6 @@ if exists("did_load_filetypes")
 endif
 augroup filetypedetect
   au! BufRead,BufNewFile *.re           setfiletype review
-  au! BufRead,BufNewFile *.hd           setfiletype hikidoc
   au! BufRead,BufNewFile *.less         setfiletype css
   au! BufRead,BufNewFile *.scala        setfiletype scala
 
