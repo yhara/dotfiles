@@ -38,7 +38,7 @@ global:
     - pattern: \Amerge! (.*)
       rule: "{system} merge {$1} ; {system} branch -d {$1}"
       for: git
-    - pattern: \A(b|branch)( .*)?
+    - pattern: \A(b|b (.*))$
       rule: "{system} branch{$2}"
       for: git
     - pattern: \Aco ?
