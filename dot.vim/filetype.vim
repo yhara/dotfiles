@@ -5,6 +5,7 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.re           setfiletype review
   au! BufRead,BufNewFile *.less         setfiletype css
   au! BufRead,BufNewFile *.scala        setfiletype scala
+  au! BufRead,BufNewFile *.treetop      setfiletype treetop
 
   au! BufRead,BufNewFile *.mab          setfiletype ruby
   au! BufRead,BufNewFile *.ges          setfiletype ruby
