@@ -129,11 +129,18 @@ inoremap <ESC>  <ESC>:<C-u>w<Return>
 " q to close help : http://d.hatena.ne.jp/mickey24/20090429/1240992099
 autocmd FileType help nnoremap <buffer> q <C-w>c
 
-inoremap SLD (""<CR>)
+" do not create swap files (only in /tmp)
+set directory-=.
+
+" nohighlight
+nnoremap <SPACE>n       :<C-u>nohlsearch<CR>
+
+" consistent Y (yank to the end of line)
+nnoremap Y y$
 
 " lemon
 set nopaste
-:set autoindent
+set autoindent
 set hlsearch
 set sw=2
 set sts=2
