@@ -4,6 +4,7 @@ endif
 augroup filetypedetect
   au! BufRead,BufNewFile *.re           setfiletype review
   au! BufRead,BufNewFile *.less         setfiletype css
+  au! BufRead,BufNewFile *.slim         setfiletype slim
   au! BufRead,BufNewFile *.scala        setfiletype scala
   au! BufRead,BufNewFile *.treetop      setfiletype treetop
 
