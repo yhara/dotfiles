@@ -4,3 +4,6 @@
 [submodule "dot.vim/bundle/vim-haml"]
 	path = dot.vim/bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
+[submodule "dot.vim/bundle/vim-smartchr"]
+	path = dot.vim/bundle/vim-smartchr
+	url = git://github.com/kana/vim-smartchr.git
