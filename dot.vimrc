@@ -149,8 +149,8 @@ set et
 set modeline
 set modelines=5
 syntax on
-:set laststatus=2  "show statusline even there's only one file
-:source $VIMRUNTIME/macros/matchit.vim
+set laststatus=2  "show statusline even there's only one file
+source $VIMRUNTIME/macros/matchit.vim
 
 " TabpageCD
 command! -nargs=? TabpageCD
