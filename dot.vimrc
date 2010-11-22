@@ -153,7 +153,7 @@ set laststatus=2  "show statusline even there's only one file
 source $VIMRUNTIME/macros/matchit.vim
 
 " TabpageCD
-command! -nargs=? TabpageCD
+command! -nargs=? -complete=file TabpageCD
       \   execute 'cd' fnameescape(<q-args>)
       \ | let t:cwd = getcwd()
 
