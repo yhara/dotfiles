@@ -98,12 +98,12 @@ nnoremap <C-w>X :<C-u>vsplit <Bar> edit #"
 
 " avoid mistype
 set nopaste
-abbr lamdba lambda
-abbr funciton function
-abbr reuqire require 
-abbr incldue include
-abbr improt import
-abbr RUby Ruby
+inoreabbr lamdba lambda
+inoreabbr funciton function
+inoreabbr reuqire require 
+inoreabbr incldue include
+inoreabbr improt import
+inoreabbr RUby Ruby
 
 " do not invoke ime
 set iminsert=0
