@@ -168,8 +168,12 @@ let g:git_command_edit = 'rightbelow vnew'
 nnoremap <Leader>gc :<C-u>GitCommit -v<Enter>
 autocmd FileType git-status,git-log nnoremap <buffer> q <C-w>c
 
-source ~/.vimrc.mine
 " unite
 nnoremap <Space>u   :<C-u>Unite buffer file_mru<Return>
 nnoremap <Space>f	  :<C-u>UniteWithBufferDir file<Return>
 " nnoremap <silent> <C-n>  :<C-u>Unite buffer <CR>
+
+if filereadable(expand('~/.vimrc.mine'))
+  source ~/.vimrc.mine
+endif
+
