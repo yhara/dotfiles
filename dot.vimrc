@@ -135,6 +135,9 @@ set directory-=.
 " nohighlight
 nnoremap <SPACE>n       :<C-u>nohlsearch<CR>
 
+" open the directory of the current buffer
+nnoremap <SPACE>e       :<C-u>e %:h<CR>
+
 " consistent Y (yank to the end of line)
 nnoremap Y y$
 
