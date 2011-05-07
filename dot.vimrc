@@ -174,6 +174,46 @@ let g:git_command_edit = 'rightbelow vnew'
 nnoremap <Leader>gc :<C-u>GitCommit -v<Enter>
 autocmd FileType git-status,git-log nnoremap <buffer> q <C-w>c
 
+" Vundle
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/vundle.git/ 
+call vundle#rc()
+
+" command
+Bundle 'thinca/vim-quickrun'
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/vimshell'
+
+" moving
+Bundle 'thinca/vim-poslist'
+
+" input
+Bundle 'kana/vim-smartchr'
+Bundle 'tpope/vim-surround'
+
+" filetype
+Bundle 'IndentAnything'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-haml'
+
+" neocomplcache
+Bundle 'Shougo/neocomplcache'
+let g:neocomplcache_enable_at_startup = 1
+Bundle 'ujihisa/neco-look'
+
+" unite
+Bundle 'Shougo/unite.vim'
+Bundle 'ujihisa/unite-colorscheme'
+Bundle 'ujihisa/unite-gem'
+Bundle 'Sixeight/unite-grep'
+let g:unite_source_grep_default_opts = '-iRHn'
+Bundle 'h1mesuke/unite-outline'
+
+filetype plugin indent on     " required!
+
 if filereadable(expand('~/.vimrc.mine'))
   source ~/.vimrc.mine
 endif
