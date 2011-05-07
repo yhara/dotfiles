@@ -19,3 +19,11 @@ termcapinfo xterm* ti@:te@
 #backtick 0 0 0 uim-fep-tick
 #bind j exec | uim-fep -S
 #bind k eval 'exec cat' kill redisplay
+
+shell -${SHELL}
+
+screen -t reposh 0
+screen -t vim 1
+screen -t zsh 2
+screen -t server 3
+select 0
