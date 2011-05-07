@@ -1,0 +1,23 @@
+source 'http://rubygems.org'
+
+# tools
+gem 'reposh'
+gem 'rak'
+gem 'git-hub'
+gem 'pit'
+gem 'ifchanged'
+gem 'rurema'
+gem 'RedCloth'
+gem 'heroku'
+
+# games
+gem 'rsdl'
+gem 'rubysdl'
+
+# scraping
+gem 'mechanize'
+
+# web
+gem 'thin'
+gem 'sinatra'
+gem 'shotgun'
