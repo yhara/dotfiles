@@ -191,6 +191,7 @@ Bundle 'Shougo/vimshell'
 Bundle 'thinca/vim-poslist'
 
 " input
+Bundle 'Align'
 Bundle 'kana/vim-smartchr'
 Bundle 'tpope/vim-surround'
 
@@ -198,6 +199,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'IndentAnything'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
 Bundle 'mattn/gist-vim'
 
 " neocomplcache
