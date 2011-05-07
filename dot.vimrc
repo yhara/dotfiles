@@ -198,6 +198,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'IndentAnything'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-haml'
+Bundle 'mattn/gist-vim'
 
 " neocomplcache
 Bundle 'Shougo/neocomplcache'
@@ -208,9 +209,13 @@ Bundle 'ujihisa/neco-look'
 Bundle 'Shougo/unite.vim'
 Bundle 'ujihisa/unite-colorscheme'
 Bundle 'ujihisa/unite-gem'
+Bundle 'h1mesuke/unite-outline'
 Bundle 'Sixeight/unite-grep'
 let g:unite_source_grep_default_opts = '-iRHn'
-Bundle 'h1mesuke/unite-outline'
+nnoremap <Space>u   :<C-u>Unite buffer file_mru<Return>
+nnoremap <Space>f   :<C-u>UniteWithBufferDir file<Return>
+nnoremap <Space>r   :<C-u>Unite file_rec<Return>
+nnoremap <Space>o   :<C-u>Unite outline<Return>
 
 filetype plugin indent on     " required!
 
