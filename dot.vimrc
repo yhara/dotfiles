@@ -183,11 +183,12 @@ set rtp+=~/.vim/vundle.git/
 call vundle#rc()
 
 " command
-Bundle 'thinca/vim-quickrun'
+" Don't forget to make vimproc after BundleInstall
 Bundle 'Shougo/vimproc'
+Bundle 'thinca/vim-quickrun'
 Bundle 'Shougo/vimshell'
 
-" moving
+" motion
 Bundle 'thinca/vim-poslist'
 
 " input
@@ -201,6 +202,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'mattn/gist-vim'
+Bundle 'ujihisa/shadow.vim'
 
 " neocomplcache
 Bundle 'Shougo/neocomplcache'
