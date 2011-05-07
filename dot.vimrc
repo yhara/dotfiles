@@ -96,6 +96,9 @@ nnoremap k gk
 " open another buffer in vsplit window
 nnoremap <C-w>X :<C-u>vsplit <Bar> edit #"
 
+" kill K
+nnoremap K <Esc>
+
 " avoid mistype
 set nopaste
 inoreabbr lamdba lambda
