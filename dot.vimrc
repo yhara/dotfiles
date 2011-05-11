@@ -203,6 +203,8 @@ Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-rails'
 Bundle 'mattn/gist-vim'
 Bundle 'ujihisa/shadow.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-markdown'
 
 " neocomplcache
 Bundle 'Shougo/neocomplcache'
