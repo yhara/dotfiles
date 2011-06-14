@@ -193,7 +193,6 @@ Bundle 'thinca/vim-poslist'
 
 " input
 Bundle 'Align'
-Bundle 'kana/vim-smartchr'
 Bundle 'tpope/vim-surround'
 
 " filetype
@@ -205,11 +204,6 @@ Bundle 'mattn/gist-vim'
 Bundle 'ujihisa/shadow.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
-
-" neocomplcache
-Bundle 'Shougo/neocomplcache'
-let g:neocomplcache_enable_at_startup = 1
-Bundle 'ujihisa/neco-look'
 
 " unite
 Bundle 'Shougo/unite.vim'
