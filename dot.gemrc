@@ -5,7 +5,6 @@ gem: --no-ri --no-rdoc
 gemcutter_key: fd9d56300e76ec49aec0b013faeb8d5a
 :backtrace: false
 :sources: 
-- http://gemcutter.org
-- http://gems.rubyforge.org
+- http://rubygems.org
 :bulk_threshold: 1000
 :verbose: true
