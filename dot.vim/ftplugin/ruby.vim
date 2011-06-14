@@ -10,7 +10,7 @@ set expandtab
 "imap <F14> <CR>
 
 " {{ -> #{ (http://vim-users.jp/2010/03/hack131/)
-inoremap <expr> <buffer> {  smartchr#loop('{', '#{', '{{{')
+"inoremap <expr> <buffer> {  smartchr#loop('{', '#{', '{{{')
 
 " = -> ' = '
-inoremap <buffer> <expr> = "smartchr#one_of(' = ', ' == ', ' === ', '=')
+"inoremap <buffer> <expr> = "smartchr#one_of(' = ', ' == ', ' === ', '=')
