@@ -14,3 +14,5 @@ set expandtab
 
 " = -> ' = '
 "inoremap <buffer> <expr> = "smartchr#one_of(' = ', ' == ', ' === ', '=')
+"inoremap <expr> = smartchr#one_of(' = ', ' == ', ' === ', '=')
+

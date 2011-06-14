@@ -3,6 +3,7 @@
 set ts=2 sw=2 sts=0
 set expandtab
 
+
 "map ; <Esc>
 "imap ; <Esc>
 
@@ -14,3 +15,4 @@ set expandtab
 
 " = -> ' = '
 "inoremap <buffer> <expr> = "smartchr#one_of(' = ', ' == ', ' === ', '=')
+"inoremap <expr> = smartchr#one_of(' = ', ' == ', ' =~ ', '=== ', '=')
