@@ -1,0 +1,15 @@
+[user]
+	name = Yutaka HARA
+	email = yutaka.hara.gmail.com
+[alias]
+  ci = commit 
+  di = diff
+  co = checkout
+  st = status -a
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[push]
+	default = matching
