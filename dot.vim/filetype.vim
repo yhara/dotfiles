@@ -13,5 +13,9 @@ augroup filetypedetect
   au! BufRead,BufNewFile *.arc          setfiletype lisp
   au! BufRead,BufNewFile *.nu           setfiletype lisp
 
+  au! BufRead,BufNewFile *.hd           setfiletype hd
+  au! BufRead,BufNewFile *.gihyo        setfiletype gihyo
+
+  au! BufRead,BufNewFile *.asc          setfiletype asciidoc
   au! BufRead,BufNewFile *.tex          lnoremap _ \
 augroup END
