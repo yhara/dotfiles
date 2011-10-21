@@ -11,3 +11,4 @@
 *.sw[po]
 tags
 .rake_tasks
+coverage
