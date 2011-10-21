@@ -18,6 +18,8 @@ Bundle 'Shougo/vimshell'
 
 " motion
 Bundle 'thinca/vim-poslist'
+map <C-i> <Plug>(poslist-prev-pos)
+map <C-o> <Plug>(poslist-next-pos)
 
 " input
 Bundle 'Align'
