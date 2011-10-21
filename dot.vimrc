@@ -35,18 +35,30 @@ Bundle 'ujihisa/shadow.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 
+Bundle 'tpope/vim-fugitive'
+  nnoremap <Space>gd :<C-u>Gdiff<Enter>
+  nnoremap <Space>gs :<C-u>Gstatus<Enter>
+  nnoremap <Space>gl :<C-u>Glog<Enter>
+  nnoremap <Space>ga :<C-u>Gwrite<Enter>
+  nnoremap <Space>gc :<C-u>Gcommit<Enter>
+  nnoremap <Space>gC :<C-u>Git commit --amend<Enter>
+  nnoremap <Space>gb :<C-u>Gblame<Enter>
+
 " unite
 Bundle 'Shougo/unite.vim'
 Bundle 'ujihisa/unite-colorscheme'
 Bundle 'ujihisa/unite-gem'
 Bundle 'h1mesuke/unite-outline'
-Bundle 'Sixeight/unite-grep'
-let g:unite_source_grep_default_opts = '-iRHn'
-nnoremap <Space>u   :<C-u>Unite buffer file_mru<Return>
-nnoremap <Space>f   :<C-u>UniteWithBufferDir file<Return>
-nnoremap <Space>r   :<C-u>Unite file_rec<Return>
-nnoremap <Space>o   :<C-u>Unite outline<Return>
-nnoremap <Space>b   :<C-u>Unite bookmark<Return>
+"Bundle 'Sixeight/unite-grep'
+Bundle 'sgur/unite-git_grep'
+
+  let g:unite_source_grep_default_opts = '-iRHn'
+  nnoremap <Space>u   :<C-u>Unite buffer file_mru<Return>
+  nnoremap <Space>f   :<C-u>UniteWithBufferDir file<Return>
+  nnoremap <Space>r   :<C-u>Unite file_rec<Return>
+  nnoremap <Space>o   :<C-u>Unite outline<Return>
+  nnoremap <Space>b   :<C-u>Unite bookmark<Return>
+  nnoremap <Space>gg :<C-u>Unite vcs_grep/git<Enter>
 
 filetype plugin indent on     " required!
 
