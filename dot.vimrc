@@ -46,6 +46,7 @@ nnoremap <Space>u   :<C-u>Unite buffer file_mru<Return>
 nnoremap <Space>f   :<C-u>UniteWithBufferDir file<Return>
 nnoremap <Space>r   :<C-u>Unite file_rec<Return>
 nnoremap <Space>o   :<C-u>Unite outline<Return>
+nnoremap <Space>b   :<C-u>Unite bookmark<Return>
 
 filetype plugin indent on     " required!
 
