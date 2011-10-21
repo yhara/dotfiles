@@ -2,6 +2,53 @@
 " vimrc
 "
 
+" Vundle
+
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/vundle.git/ 
+call vundle#rc()
+
+" command
+" Don't forget to make vimproc after BundleInstall
+Bundle 'Shougo/vimproc'
+Bundle 'thinca/vim-quickrun'
+Bundle 'Shougo/vimshell'
+
+" motion
+Bundle 'thinca/vim-poslist'
+
+" input
+Bundle 'Align'
+Bundle 'tpope/vim-surround'
+
+" filetype
+Bundle 'IndentAnything'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-haml'
+Bundle 'tpope/vim-rails'
+Bundle 'mattn/gist-vim'
+Bundle 'ujihisa/shadow.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-markdown'
+
+" unite
+Bundle 'Shougo/unite.vim'
+Bundle 'ujihisa/unite-colorscheme'
+Bundle 'ujihisa/unite-gem'
+Bundle 'h1mesuke/unite-outline'
+Bundle 'Sixeight/unite-grep'
+let g:unite_source_grep_default_opts = '-iRHn'
+nnoremap <Space>u   :<C-u>Unite buffer file_mru<Return>
+nnoremap <Space>f   :<C-u>UniteWithBufferDir file<Return>
+nnoremap <Space>r   :<C-u>Unite file_rec<Return>
+nnoremap <Space>o   :<C-u>Unite outline<Return>
+
+filetype plugin indent on     " required!
+
+" -- Vundle
+
 " coding
 set encoding=utf-8
 
@@ -134,51 +181,6 @@ autocmd TabEnter *
 let g:git_command_edit = 'rightbelow vnew'
 nnoremap <Leader>gc :<C-u>GitCommit -v<Enter>
 autocmd FileType git-status,git-log nnoremap <buffer> q <C-w>c
-
-" Vundle
-
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-set rtp+=~/.vim/vundle.git/ 
-call vundle#rc()
-
-" command
-" Don't forget to make vimproc after BundleInstall
-Bundle 'Shougo/vimproc'
-Bundle 'thinca/vim-quickrun'
-Bundle 'Shougo/vimshell'
-
-" motion
-Bundle 'thinca/vim-poslist'
-
-" input
-Bundle 'Align'
-Bundle 'tpope/vim-surround'
-
-" filetype
-Bundle 'IndentAnything'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-rails'
-Bundle 'mattn/gist-vim'
-Bundle 'ujihisa/shadow.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-markdown'
-
-" unite
-Bundle 'Shougo/unite.vim'
-Bundle 'ujihisa/unite-colorscheme'
-Bundle 'ujihisa/unite-gem'
-Bundle 'h1mesuke/unite-outline'
-Bundle 'Sixeight/unite-grep'
-let g:unite_source_grep_default_opts = '-iRHn'
-nnoremap <Space>u   :<C-u>Unite buffer file_mru<Return>
-nnoremap <Space>f   :<C-u>UniteWithBufferDir file<Return>
-nnoremap <Space>r   :<C-u>Unite file_rec<Return>
-nnoremap <Space>o   :<C-u>Unite outline<Return>
-
-filetype plugin indent on     " required!
 
 if filereadable(expand('~/.vimrc.mine'))
   source ~/.vimrc.mine
