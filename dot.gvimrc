@@ -30,14 +30,12 @@ elseif has('xfontset')
   set guifontset=a14,r14,k14
 elseif has('mac')
   set guifont=Monaco:h14
+  "set macatsui
+  "set antialias
+  " for use Japanese
+  "set termencoding=japan
+  "set gfw=Osaka-Mono:h12
+  set ambiwidth=double
 endif
 
-" MacPorts
-set macatsui
-set antialias
-" for use Japanese
-set termencoding=japan
-set gfw=Osaka-Mono:h12
 
-" ambwidth
-set ambwidth=double
