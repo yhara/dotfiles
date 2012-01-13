@@ -13,18 +13,18 @@ set grepprg=grep\ -nH\ $*
 " OPTIONAL: This enables automatic indentation as you type. 
 filetype indent on 
 
-" │╞╝лд╬┤─╢нд╦╣чдяд╗д┐ .tex е╒ебедеыдЄ dvi е╒ебедеыд╦е│еєе╤едеыд╣дые│е▐еєе╔д╦бд┼м╡╣├╓дн┤╣дид╞дпд└д╡ддбе (Vine Linux 3.1 д╬╛ь╣ч) 
+" хРДшЗкуБочТ░хвГуБлхРИуВПуБЫуБЯ .tex уГХуВбуВдуГлуВТ dvi уГХуВбуВдуГлуБлуВ│уГ│уГСуВдуГлуБЩуВЛуВ│уГЮуГ│уГЙуБля╝МщБйхоЬч╜оуБНцПЫуБИуБжуБПуБауБХуБДя╝О (Vine Linux 3.1 уБоха┤хРИ) 
 let g:Tex_CompileRule_dvi = 'platex $*' 
 
-" ╞▒══д╦бдdvi е╒ебедеыд╬е╙ехб╝еяб╝ 
+" хРМцзШуБля╝Мdvi уГХуВбуВдуГлуБоуГУуГеуГ╝уГпуГ╝ 
 let g:Tex_ViewRule_dvi = 'dviout' 
 "
-" ┼└╠╟╢╪╗▀
+" чВ╣ц╗ЕчжБцнв
 set guicursor=a:blinkon0
 
-" е╒ейеєе╚└▀─ъ
+" уГХуВйуГ│уГИшинхоЪ
 if has('win32')
-  set guifont=NFете╚ефеве▌еэ:h11:cUNICODE<F14>
+  set guifont=NFуГвуГИуГдуВвуГЭуГн:h11:cUNICODE<F14>
   set linespace=1
 elseif has('xfontset')
   set guifontset=a14,r14,k14
