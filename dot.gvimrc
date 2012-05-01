@@ -13,31 +13,29 @@ set grepprg=grep\ -nH\ $*
 " OPTIONAL: This enables automatic indentation as you type. 
 filetype indent on 
 
-" ³Æ¼«¤Î´Ä¶­¤Ë¹ç¤ï¤»¤¿ .tex ¥Õ¥¡¥¤¥ë¤ò dvi ¥Õ¥¡¥¤¥ë¤Ë¥³¥ó¥Ñ¥¤¥ë¤¹¤ë¥³¥Ş¥ó¥É¤Ë¡¤Å¬µ¹ÃÖ¤­´¹¤¨¤Æ¤¯¤À¤µ¤¤¡¥ (Vine Linux 3.1 ¤Î¾ì¹ç) 
+" å„è‡ªã®ç’°å¢ƒã«åˆã‚ã›ãŸ .tex ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ dvi ãƒ•ã‚¡ã‚¤ãƒ«ã«ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹ã‚³ãƒãƒ³ãƒ‰ã«ï¼Œé©å®œç½®ãæ›ãˆã¦ãã ã•ã„ï¼ (Vine Linux 3.1 ã®å ´åˆ) 
 let g:Tex_CompileRule_dvi = 'platex $*' 
 
-" Æ±ÍÍ¤Ë¡¤dvi ¥Õ¥¡¥¤¥ë¤Î¥Ó¥å¡¼¥ï¡¼ 
+" åŒæ§˜ã«ï¼Œdvi ãƒ•ã‚¡ã‚¤ãƒ«ã®ãƒ“ãƒ¥ãƒ¼ãƒ¯ãƒ¼ 
 let g:Tex_ViewRule_dvi = 'dviout' 
 "
-" ÅÀÌÇ¶Ø»ß
+" ç‚¹æ»…ç¦æ­¢
 set guicursor=a:blinkon0
 
-" ¥Õ¥©¥ó¥ÈÀßÄê
+" ãƒ•ã‚©ãƒ³ãƒˆè¨­å®š
 if has('win32')
-  set guifont=NF¥â¥È¥ä¥¢¥İ¥í:h11:cUNICODE<F14>
+  set guifont=NFãƒ¢ãƒˆãƒ¤ã‚¢ãƒãƒ­:h11:cUNICODE<F14>
   set linespace=1
 elseif has('xfontset')
   set guifontset=a14,r14,k14
 elseif has('mac')
   set guifont=Monaco:h14
+  "set macatsui
+  "set antialias
+  " for use Japanese
+  "set termencoding=japan
+  "set gfw=Osaka-Mono:h12
+  set ambiwidth=double
 endif
 
-" MacPorts
-set macatsui
-set antialias
-" for use Japanese
-set termencoding=japan
-set gfw=Osaka-Mono:h12
 
-" ambwidth
-set ambwidth=double
