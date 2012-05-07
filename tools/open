@@ -12,10 +12,9 @@ else
   case File.extname(path).downcase[1..-1]
   when "png", "jpg", "gif"
     sh "pqiv -i '#{path}' &"
-  when "xls", "xlsx", "ods"
-    sh "oocalc '#{path}' &"
-  when "doc", "docx", "odt"
-    sh "oowriter '#{path}' &"
+  when "xls", "xlsx", "ods",
+       "doc", "docx", "odt"
+    sh "libreoffice '#{path}' &"
   when "pdf"
     sh "acroread '#{path}' &"
   when "html"
